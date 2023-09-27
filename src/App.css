@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Roboto&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  /* background-color: green; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar{
+  width: 256px;
+  border-right: 2px solid #E5E8EB;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all ease .5s;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainSidebar{
+  padding: 20px 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile{
+  width: 100%;
+  background-color: #E5E8EB;
+  padding: 7px 5px ;
+  border-radius: 5px;
+  margin: 0px auto;
+}
+.name{
+  margin-left: 10px;
+  padding-top: 5px;
+}
+.p{
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+.no{
+  font: 16px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+.nav-link{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 18.75px;
+  font-weight: 500;
+  padding: 10px 25px;
+  width: 100%;
+  border-radius: 8px;
+}
+.active{
+  background-color: #E9F3EE;
+}
+.nav-link .nav-name{
+  margin-left:  15px;
+}
+.mainContent{
+  padding-top: 130px;
+  margin-left: 256px;
+  background-color: #FCFCFD;
+  height: auto;
+}
+.main-header{
+  margin-left: 256px;
+  background-color: #fff;
+  padding-bottom: 10px;
+  height: 86px;
+  /* border-bottom: 1px solid #8C9095; */
+  padding-bottom: 20px;
+}
+.closeIcon{
+  margin-left: 100px;
+  margin-bottom: 8px;
+  margin-top: -11px;
+}
+.main-header input{
+  max-width: 300px;
+  width: 100%;
+  height: 46px;
+  padding: 0 20px;
+  /* border: 1px solid #77797a36; */
+  border-radius: 8px;
+  background-color: #F0F2F4;
+  border: none;
+}
+.main-header input:focus,
+.main-header input:active,
+.main-header input:hover{
+  border: 1px solid green;
+}
+.main-header .links{
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.show{
+  opacity: 1 !important;
+  z-index: 111111;
+}
+.menuICON{
+  margin-left: 30px;
+    font-size: 29px;
+    color: #8C9095;
+}
+.main-header .links .fa-bell,
+.main-header .links .fa-comments{
+  padding: 0px 25px;
+  font-size: 25px;
+  color: #a4a6a8;
+}
+.main-header .links .btn-success{
+  padding: 10px 20px;
+  margin-left: 8px;
+  background-color:#1F6461;
 }
 
-.App-link {
-  color: #61dafb;
+.emailIcon{
+  color: #8C9095;
+  margin: 0 10px;
+  font-size: 100px;
+}
+.notificationsIcon{
+  color:#8C9095 ;
+  margin:0 30px;
+}
+.search{
+  margin-left: 20px;
+}
+.PostContainer{
+  width: 98%;
+  margin: 0 auto;
+}
+.card{
+  border: none;
+}
+.card-header{
+  background-color: white;
+  border: none;
+}
+.postImage img{
+  max-width: 300px;
+  height: 291px;
+  width: 100%;
+
+}
+.postReactions{
+  width: 90%;
+}
+.chatICON{
+  width: 100%;
+  margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:768px){
+  .sidebar{
+    opacity: 0;
+    position: fixed;
+    background-color: white;
   }
-  to {
-    transform: rotate(360deg);
+  .main-header{
+    margin-left: 0;
+    background-color: #fff;
+    padding-bottom: 10px;
+    height: 86px;
+    /* border-bottom: 1px solid #8C9095; */
+    padding-bottom: 20px;
   }
+  .main-header .links .fa-bell,
+.main-header .links .fa-comments{
+  padding: 0px 5px;
+  font-size: 25px;
+  color: #a4a6a8;
+}
+  .main-header .links .btn-success{
+    padding: 10px 20px;
+    /* margin-left: 8px; */
+    /* width: 100%; */
+    text-wrap: nowrap;
+    background-color:#1F6461;
+  }
+  .mainContent{
+    padding-top: 130px;
+    margin-left: 0;
+    background-color: #FCFCFD;
+    height: auto;
+    width: 100%;
+  }
+  .postImage img {
+    max-width: 100%;
+    height: 291px;
+    width: 100%;
+}
 }
